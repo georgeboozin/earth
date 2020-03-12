@@ -1,0 +1,22 @@
+{
+  "name": "@boozingeorge/impulse",
+  "version": "0.0.1",
+  "description": "front-end impulse",
+  "author": "George Boozin <boozingeorge@gmail.com>",
+  "homepage": "https://github.com/boozingeorge/earth#readme",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boozingeorge/earth.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/boozingeorge/earth/issues"
+  }
+}

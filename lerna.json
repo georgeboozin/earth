@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "bootstrap": {
+      "hoist": true,
+      "ignore-scripts": true
+    },
+    "publish": {
+      "force": true,
+      "conventionalCommits": true
+    }
+  },
+  "version": "independent",
+  "npmClientArgs": ["--no-optional"]
+}
