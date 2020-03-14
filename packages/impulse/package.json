@@ -21,6 +21,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "start:port": "next start -p $PORT",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
