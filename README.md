@@ -28,5 +28,3 @@ type: `['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'revert', 'build', '
 scope: `impulse, synapse` - package name
 
 subject: `sentence-case`
-
-see more [there](https://bitbucket.raiffeisen.ru/projects/FCC/repos/atlant/browse/workspaces/config/commitlint)
