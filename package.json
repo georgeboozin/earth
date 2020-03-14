@@ -5,6 +5,18 @@
     "lint": "eslint ./packages --quiet --ext .js,.ts,.tsx --config ./.eslintrc.js",
     "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run prettier",
+      "npm run lint --",
+      "npm run test -- --findRelatedTests"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -16,7 +28,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
     "lerna": "^3.20.2",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
   }
 }
