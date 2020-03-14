@@ -2,6 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "bootstrap": "lerna bootstrap --hoist --ignore-scripts",
+    "clean": "lerna clean --yes",
     "lint": "eslint ./packages --quiet --ext .js,.ts,.tsx --config ./.eslintrc.js",
     "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
