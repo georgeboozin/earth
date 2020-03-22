@@ -9,7 +9,9 @@
     "bootstrap": "lerna bootstrap --hoist --ignore-scripts",
     "clean": "lerna clean --yes",
     "lint": "eslint ./packages --quiet --ext .js,.ts,.tsx --config ./.eslintrc.js",
-    "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx}'"
+    "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "docker:build:impulse": "docker build -t boozingeorge/impulse -f impulse.dockerfile .",
+    "docker:run:impulse": "docker run --name impulse --rm -p 3000:3000 boozingeorge/impulse"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
