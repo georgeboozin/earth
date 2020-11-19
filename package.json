@@ -6,8 +6,13 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist --ignore-scripts",
+    "bootstrap": "lerna bootstrap --ci  --hoist --ignore-scripts",
+    "bootstrap:no-ci": "lerna bootstrap --no-ci  --hoist --ignore-scripts",
+    "startup": "./scripts/startup.sh",
     "clean": "lerna clean --yes",
+    "clean:builds": "lerna run --concurrency 1 --stream clean:build",
+    "clean:leaf-package-lock": "lerna run --concurrency 1 --stream clean:package-lock",
+    "clean:all": "./scripts/clean-all.sh",
     "lint": "eslint ./packages --quiet --ext .js,.ts,.tsx --config ./.eslintrc.js",
     "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx}'",
     "docker:build:impulse": "docker build -t boozingeorge/impulse -f impulse.dockerfile .",
@@ -28,7 +33,7 @@
   "dependencies": {},
   "devDependencies": {
     "@boozingeorge/config": "file:packages/config",
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^11.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",

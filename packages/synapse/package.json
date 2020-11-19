@@ -14,7 +14,8 @@
     "url": "git+https://github.com/boozingeorge/earth.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean:package-lock": "rm -rf package-lock.json"
   },
   "bugs": {
     "url": "https://github.com/boozingeorge/earth/issues"
